@@ -215,7 +215,6 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           archive: false
-          name: ${{ matrix.artifact-name }}_installer.dmg
           path: ${{ matrix.build-path }}/elastic-setup-macos.dmg
           if-no-files-found: error
 
@@ -233,7 +232,6 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           archive: false
-          name: ${{ matrix.artifact-name }}_installer.exe
           path: build/windows/x64/installer
           if-no-files-found: error
 
@@ -270,7 +268,6 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           archive: false
-          name: Elastic-SystemCore.ipk
           path: .github/ipk_build/elastic_dashboard_*.ipk
           if-no-files-found: error
 
