@@ -274,7 +274,7 @@ jobs:
   github-pages:
     name: "Upload to GitHub Pages"
     runs-on: ubuntu-22.04
-    if: github.repository == 'Gold872/elastic_dashboard' && github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     needs: [build-web]
     steps:
       - name: Download Web Build
