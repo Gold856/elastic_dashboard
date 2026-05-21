@@ -303,7 +303,9 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           path: artifacts
-          pattern: Elastic-*
+          pattern: |
+            Elastic-*
+            elastic-*
           merge-multiple: true
           skip-decompress: true
 
