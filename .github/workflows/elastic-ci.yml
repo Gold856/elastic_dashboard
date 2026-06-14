@@ -261,14 +261,14 @@ jobs:
       - name: Create SystemCore installer
         working-directory: .github/ipk_build
         run: |
-          chmod +x ./build.sh
           ./build.sh
+          mv .github/ipk_build/elastic_dashboard_*.ipk .github/ipk_build/Elastic-SystemCore.ipk
 
       - name: Upload SystemCore installer
         uses: actions/upload-artifact@v7
         with:
           archive: false
-          path: .github/ipk_build/elastic_dashboard_*.ipk
+          path: .github/ipk_build/Elastic-SystemCore.ipk
           if-no-files-found: error
 
   github-pages:
